@@ -39,20 +39,19 @@ class Vote
 		{	int i;
 			for (int j = 0; j < args.length; j++)
 			{
-			for (i = 0; i < results.length; i++)
-			{
-				if (results[i][0].equals(args[j]))
+				for (i = 0; i < results.length; i++)
 				{
-					System.out.println(results[i][0] +": " + results[i][1]);
-					break;
+					if (results[i][0].equals(args[j]))
+					{
+						System.out.println(results[i][0] +": " + results[i][1]);
+						break;
+					}
 				}
-			}
-			if (i == results.length)
-			{
-			System.out.println("Name not found.");
-			}
+				if (i == results.length)
+				{
+					System.out.println("Name not found.");
+				}
 			}	
-
 		}
 	}
 }
